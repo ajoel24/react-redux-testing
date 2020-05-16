@@ -3,7 +3,7 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <header>
+    <header data-test="header">
       <nav className="container" data-test="container" role="navigation">
         <div className="logo" data-test="logo">
           Testing!
