@@ -1,0 +1,17 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: linear-gradient(to right, #000428, #004e92);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
