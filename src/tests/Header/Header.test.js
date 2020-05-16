@@ -15,14 +15,18 @@ describe('Header Component', () => {
     component = setup();
   });
 
+  const findByDataAttr = (component, attr) => {
+    return component.find(`[data-test='${attr}']`);
+  };
+
   it('Should render without errors', () => {
     // console.log(component.debug());
-    const navWrapper = component.find(`[data-test='container']`);
+    const navWrapper = findByDataAttr(component, 'container');
     expect(navWrapper.length).toBe(1);
   });
 
   it('Should have one logo div', () => {
-    const logoWrapper = component.find(`[data-test='logo']`);
+    const logoWrapper = findByDataAttr(component, 'logo');
     expect(logoWrapper.length).toBe(1);
   });
 });
