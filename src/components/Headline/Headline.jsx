@@ -10,9 +10,9 @@ class Headline extends Component {
     const { title, desc } = this.props;
     return (
       title && (
-        <section className="headline">
-          <h1>{title}</h1>
-          <p>{desc}</p>
+        <section className="headline" data-test="headline">
+          <h1 data-test="title">{title}</h1>
+          <p data-test="desc">{desc}</p>
         </section>
       )
     );
