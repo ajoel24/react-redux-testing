@@ -17,12 +17,12 @@ describe('Header Component', () => {
 
   it('Should render without errors', () => {
     // console.log(component.debug());
-    const navWrapper = component.find('nav.container');
+    const navWrapper = component.find(`[data-test='container']`);
     expect(navWrapper.length).toBe(1);
   });
 
   it('Should have one logo div', () => {
-    const logoWrapper = component.find('div.logo');
+    const logoWrapper = component.find(`[data-test='logo']`);
     expect(logoWrapper.length).toBe(1);
   });
 });

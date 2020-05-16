@@ -4,8 +4,10 @@ import './Header.scss';
 const Header = () => {
   return (
     <header>
-      <nav className="container" role="navigation">
-        <div className="logo">Testing!</div>
+      <nav className="container" data-test="container" role="navigation">
+        <div className="logo" data-test="logo">
+          Testing!
+        </div>
       </nav>
     </header>
   );
