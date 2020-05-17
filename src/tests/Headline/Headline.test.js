@@ -1,4 +1,5 @@
 import React from 'react';
+import { checkPropTypes } from 'prop-types';
 import { shallow } from 'enzyme';
 import Headline from '../../components/Headline/Headline';
 import { findByDataAttr } from '../../utils/index';
@@ -9,6 +10,33 @@ const setup = (props = {}) => {
 };
 
 describe('Headline component', () => {
+  describe('PropTypes', () => {
+    it('Should not throw warnings', () => {
+      const expectedProps = {
+        title: 'hello',
+        desc: 'hello',
+        temp: {
+          name: 'Andrew Joel',
+          age: 20,
+          isOnline: true,
+        },
+        likes: [
+          {
+            music: 'Billie Jean',
+            number: 1,
+          },
+        ],
+      };
+
+      const propsErr = checkPropTypes(
+        Headline.propTypes,
+        expect,
+        'props',
+        Headline.name
+      );
+      expect(propsErr).toBeUndefined();
+    });
+  });
   describe('Have props', () => {
     let wrapper;
 
